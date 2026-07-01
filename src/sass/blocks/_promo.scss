@@ -1,0 +1,26 @@
+.promo {
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  background: url("../img/result_2026-06-25 17.43.27.jpg") no-repeat 50% / cover;
+  padding-top: 205px;
+  &_title {
+    width: 535px;
+    margin-top: 10px;
+  }
+  &_btns {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+  }
+  &_link {
+    color: #000;
+    font-weight: bold;
+    &:hover {
+      color: orange;
+      text-decoration: none;
+    }
+  }
+}

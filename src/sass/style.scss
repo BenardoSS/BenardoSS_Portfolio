@@ -11,5 +11,9 @@
 
 .container {
   width: 1140px;
-  m0argin: 0 auto;
+  margin: 0 auto;
 }
+
+@import "blocks/promo.scss";
+@import "blocks/title.scss";
+@import "blocks/button.scss";
