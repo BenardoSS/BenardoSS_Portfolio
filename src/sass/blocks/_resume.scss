@@ -1,0 +1,21 @@
+.resume {
+  padding-top: 120px;
+  padding: 120px 65px 0 65px;
+  &_title {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &_subtitle {
+    text-align: center;
+  }
+  &_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+  }
+}
