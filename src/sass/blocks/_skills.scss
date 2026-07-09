@@ -1,0 +1,130 @@
+// 1. Переменные (Variables)
+$primary-color: #ff9800; // Оранжевый акцент
+$border-color: #333333; // Темная рамка карточек
+$bg-gray: #e0e0e0; // Серый фон для незаполненного прогресс-бара
+$text-color: #333333;
+$font-stack: Arial, sans-serif;
+
+// 2. Основные стили
+.skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: $font-stack;
+
+  // Заголовок секции
+  .skills-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    .subtitle {
+      background-color: $primary-color;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin: 15px 0;
+      color: $text-color;
+    }
+
+    .underline {
+      width: 50px;
+      height: 3px;
+      background-color: $primary-color;
+      margin: 0 auto;
+    }
+  }
+
+  // Сетка с карточками (Grid)
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+
+    .skill-card {
+      border: 1px solid $border-color;
+      padding: 25px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .skill-icon {
+        height: 50px;
+        margin-bottom: 20px;
+        object-fit: contain;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin: 0 0 15px 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: $text-color;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+
+  // Нижний блок со шкалами
+  .progress-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+    .progress-item {
+      display: flex;
+      flex-direction: column;
+
+      .progress-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 16px;
+
+        .progress-title {
+          display: flex;
+          align-items: center;
+
+          // Оранжевый кружочек слева от названия
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            margin-right: 8px;
+          }
+        }
+      }
+
+      // Сама полоса
+      .progress-bar {
+        width: 100%;
+        height: 12px;
+        background-color: $bg-gray;
+        border-radius: 6px;
+        overflow: hidden;
+
+        // Заливка процента
+        .progress-fill {
+          height: 100%;
+          background-color: $primary-color;
+          border-radius: 6px;
+          transition: width 1s ease-in-out;
+        }
+      }
+    }
+  }
+}
